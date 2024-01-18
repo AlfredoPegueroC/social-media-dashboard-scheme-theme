@@ -1,0 +1,38 @@
+[
+  {
+    "title": "facebook",
+    "userName": "@nathanf",
+    "stats":{
+      "followers": "1987",
+      "EarnedStatus": "up",
+      "followersEarnedToday": "12"
+    }
+  },
+  {
+    "title": "twitter",
+    "userName": "@nathanf",
+    "stats":{
+      "followers": "1044",
+      "EarnedStatus": "up",
+      "followersEarnedToday": "99"
+    }
+  },
+  {
+    "title": "instagram",
+    "userName": "@realnathanf",
+    "stats":{
+      "followers": "11k",
+      "EarnedStatus": "up",
+      "followersEarnedToday": "1099"
+    }
+  },
+  {
+    "title": "youtube",
+    "userName": "Nathan F.",
+    "stats":{
+      "followers": "8239",
+      "EarnedStatus": "down",
+      "followersEarnedToday": "144"
+    }
+  }
+]

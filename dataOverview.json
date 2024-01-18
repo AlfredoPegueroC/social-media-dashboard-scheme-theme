@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Page Views",
+    "social": "facebook",
+    "quantity": "87",
+    "earned": "3",
+    "status": "up"
+  },
+  {
+    "title": "Likes",
+    "social": "facebook",
+    "quantity": "52",
+    "earned": "2",
+    "status": "down"
+  },
+  {
+    "title": "Likes",
+    "social": "instagram",
+    "quantity": "5462",
+    "earned": "2257",
+    "status": "up"
+  },
+  {
+    "title": "Profile Views",
+    "social": "instagram",
+    "quantity": "52k",
+    "earned": "1375",
+    "status": "up"
+  },
+  {
+    "title": "Retweets",
+    "social": "twitter",
+    "quantity": "117",
+    "earned": "303",
+    "status": "up"
+  },
+  {
+    "title": "Likes",
+    "social": "twitter",
+    "quantity": "507",
+    "earned": "553",
+    "status": "up"
+  },
+  {
+    "title": "Likes",
+    "social": "youtube",
+    "quantity": "107",
+    "earned": "19",
+    "status": "down"
+  },
+  {
+    "title": "Total Views",
+    "social": "youtube",
+    "quantity": "1407",
+    "earned": "12",
+    "status": "down"
+  }
+]
