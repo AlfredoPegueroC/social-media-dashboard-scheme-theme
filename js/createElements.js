@@ -42,8 +42,6 @@ function createOverview(data){
   overview.appendChild(content)
 }
 
-
-
 async function getDataFollower() {
   await fetch("/socialstats.json")
     .then((res) => res.json())
@@ -64,10 +62,8 @@ async function getDataOverview(){
 }
 
 
-document.addEventListener("DOMContentLoaded", e => {
+document.addEventListener("DOMContentLoaded", () => {
   getDataFollower()
   getDataOverview()
 })
 
-
-// createCard()

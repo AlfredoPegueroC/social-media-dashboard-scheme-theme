@@ -9,24 +9,24 @@
   --clr-sm-Instagram: linear-gradient(90deg, #fdc468 50%, #df4996 80%);
   --clr-sm-YouTube: hsl(348, 97%, 39%);
 
-  /* DARK THEME */
-  --clr-DarkTheme: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
-
-  --clr-dark-Bg-VeryDarkBlue: hsl(230, 17%, 14%);
-  --clr-dark-Bgp-VeryDarkBlue: hsl(232, 19%, 15%);
-  --clr-dark-card-DarkDesaturatedBlue: hsl(228, 28%, 20%);
-  --clr-dark-txt-DesaturatedBlue: hsl(228, 34%, 66%);
-  --clr-dark-white: hsl(0, 0%, 100%);
-
   /* LIGHT THEME */
   --clr-lightTheme: hsl(230, 22%, 74%);
-  --clr-lightTheme-bg-white: hsl(0, 0%, 100%);
+  --clr-background: hsl(0, 0%, 100%);
   --clr-lightTheme-bgp-VeryPaleBlue: hsl(225, 100%, 98%);
-  --clr-lightTheme-card-LightGrayishBlue: hsl(227, 47%, 96%);
-  --clr-lightTheme-txt-DarkGrayishBlue: hsl(228, 12%, 44%);
-  --clr-lightTheme-txt-VeryDarkBlue: hsl(230, 17%, 14%);
+  --clr-card: hsl(227, 47%, 96%);
+  --clr-txt-sub: hsl(228, 12%, 44%);
+  --clr-txt-main: hsl(230, 17%, 14%);
 }
 
+.darkMode {
+  --clr-DarkTheme: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+
+  --clr-background: hsl(230, 17%, 14%);
+  --clr-dark-Bgp-VeryDarkBlue: hsl(232, 19%, 15%);
+  --clr-card: hsl(228, 28%, 20%);
+  --clr-txt-sub: hsla(229, 15%, 64%, 0.753);
+  --clr-txt-main: hsl(0, 0%, 100%);
+}
 /*#region BROWSER RESET */
 * {
   font: inherit;
@@ -46,6 +46,7 @@ svg {
 }
 body {
   min-height: 100dvh;
+  background: var(--clr-background);
 }
 h1,
 h2,
@@ -80,24 +81,56 @@ span {
 .header .title {
   font-size: 1.5rem;
   font-weight: 800;
+  color: var(--clr-txt-main);
 }
 .header .title > span {
   font-size: 1rem;
   font-weight: 600;
+  color: var(--clr-txt-sub);
 }
-.darkMode {
+.switcher {
+  position: relative;
+  cursor: pointer;
   display: flex;
-}
-.darkMode input[type="checkbox"] {
+  font-weight: 800;
+  color: var(--clr-txt-sub);
+  background: hsl(230, 22%, 74%);
+  width: 60px;
+  height: 30px;
   margin-left: auto;
+  border-radius: 200px;
+}
+.switcher.active {
+  background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.switcher::before {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 25px;
+  height: 25px;
+  top: 2.5px;
+  right: 3px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.switcher.active::before {
+  background: hsl(230, 17%, 14%);
+  transform: translateX(-30px);
+  transition: 0.3s;
+}
+
+.switcher input[type="checkbox"] {
+  opacity: 0;
 }
 
 .card {
   position: relative;
   margin-top: 2rem;
-  background: var(--clr-lightTheme-card-LightGrayishBlue);
+  background: var(--clr-card);
   padding: 2rem;
   border-radius: 0.5rem;
+  color: var(--clr-txt-main);
 }
 
 .card_items {
@@ -133,6 +166,9 @@ span {
   font-size: 4rem;
   font-weight: 800;
 }
+.number_follower > span {
+  color: var(--clr-txt-sub);
+}
 .card__follower span {
   font-size: 1rem;
   font-weight: normal;
@@ -146,7 +182,7 @@ span {
   top: 0;
   width: 100%;
 }
- .up,
+.up,
 .down {
   align-items: center;
   color: var(--clr-primary-LimeGreen);
@@ -156,22 +192,24 @@ span {
   color: var(--clr-primary-BrightRed);
 }
 
-.overview .title{
+.overview .title {
   margin-top: 2rem;
   font-size: 2rem;
   font-weight: 800;
-  color: var(--clr-lightTheme-txt-DarkGrayishBlue);
+  color: var(--clr-txt-main);
 }
-
+.overview .card .top {
+  color: var(--clr-txt-sub);
+}
 .overview .card .top,
-.overview .card .bottom{
+.overview .card .bottom {
   justify-content: space-between;
   align-items: center;
 }
-.overview .card .bottom{
+.overview .card .bottom {
   margin-top: 2rem;
 }
-.bottom h3{
+.bottom h3 {
   font-size: 2.5rem;
   font-weight: 800;
 }
