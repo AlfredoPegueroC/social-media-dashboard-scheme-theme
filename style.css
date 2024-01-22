@@ -47,6 +47,7 @@ svg {
 body {
   min-height: 100dvh;
   background: var(--clr-background);
+  font-family: 'Inter', sans-serif;
 }
 h1,
 h2,
@@ -65,6 +66,12 @@ p {
   display: flex;
   gap: var(--gap, 0.5rem);
 }
+.card_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
 span {
   display: block;
 }
@@ -74,11 +81,12 @@ span {
 }
 .wrapper {
   width: 100vw;
-  padding: 1rem;
-  max-width: 375px;
+  padding: 2rem;
+  max-width: 75rem;
 }
 
 .header .title {
+  position: relative;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--clr-txt-main);
@@ -87,6 +95,35 @@ span {
   font-size: 1rem;
   font-weight: 600;
   color: var(--clr-txt-sub);
+}
+
+.header .title::after{
+  position: absolute;
+  content: "";
+  bottom: -40%;
+  width: 100%;
+  outline: 1px solid var(--clr-txt-sub);
+}
+
+@media (min-width: 48rem) {
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .title::after{
+    display: none;
+  }
+}
+
+.darkmode_swicher{
+  margin-top: 2rem;
+  color: var(--clr-txt-sub);
+    align-items: center;
+    font-weight: 600;
+}
+.darkmode_swicher h3{
+  font-size: 1.25rem;
 }
 .switcher {
   position: relative;
@@ -192,7 +229,7 @@ span {
   color: var(--clr-primary-BrightRed);
 }
 
-.overview .title {
+.overview_container .title {
   margin-top: 2rem;
   font-size: 2rem;
   font-weight: 800;
@@ -212,4 +249,9 @@ span {
 .bottom h3 {
   font-size: 2.5rem;
   font-weight: 800;
+}
+
+footer{
+  margin-right: auto;
+  margin-left: 40%;
 }

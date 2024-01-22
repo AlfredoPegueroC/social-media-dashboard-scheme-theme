@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-  
+
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | [Challenge Name Here]</title>
 
@@ -22,46 +25,30 @@
             Social Media Dashboard
             <span>Total Followers: 23,004</span>
           </h1>
-          <label class="switcher" >
-            <input id="switch" class="btn" placeholder="check" type="checkbox" value="check" />
-          </label>
+          <div class="darkmode_swicher flex">
+            <h3>Dark Mode</h3>
+            <label class="switcher">
+              <input id="switch" class="btn" placeholder="check" type="checkbox" value="check" />
+            </label>
+          </div>
         </header>
-        <div id="card" class="card_container">
-          <!-- <section class="card instagram">
-            <article class="card_items flex">
-              <div class="card_social flex">
-                <img src="./images/icon-facebook.svg" alt="" />
-                <span>@nathanf</span>
-              </div>
-              <div class="card__follower">
-                <h4 class="number_follower">1987 <span>Followers</span></h4>
-              </div>
-              <span class="updowns flex"><img src="./images/icon-up.svg" alt="" />99 Today</span>
-            </article>
-          </section> -->
+        <div id="card" class="card_container card_grid">
+          <!-- SOCIAL MEDIA CARDS -->
         </div>
-
-        <section class="overview">
-          <h2 class="title">Overview - Today</h2>
-          <!-- <div class="card">
-            <div class="top flex">
-              <h3>Page views</h3>
-              <img src="./images/icon-facebook.svg" alt="">
-            </div>
-            <div class="bottom flex">
-              <h3>87</h3>
-              <span class="up flex"><img src="./images/icon-up.svg" alt="">3%</span>
-            </div>
-          </div>           -->
-
+        <div class="overview_container ">
+           <h2 class="title">Overview - Today</h2>
+          <section class="overview card_grid">
+            <!-- OVERVIEW CARDS -->
+          </div>          
         </section>
-
+        </div>
+        
       </div>
     </main>
-  <!-- <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  <footer/> -->
+    <footer class="attribution">
+    Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a  rel="noopener" href="https://github.com/AlfredoPegueroC" target="_blank">Alfredo Peguero</a>.
+  <footer/>
     <script src="./js/createElements.js"></script>
     <script src="./js/darkMode.js"></script>
   </body>
